@@ -8,10 +8,10 @@ function ycgcr = rgb2ycgcr(rgb)
 %   ycgcr  - ycgcr image
 
 % reshape image to 2d matrix
-rgb = double(rgb);
+rgb = im2double(rgb);
 [m, n, p] = size(rgb);
 rgb_2d = reshape(rgb, m*n, p);
-% convertion parameters
+% convert parameters
 origT = [65.481 128.553 24.966;...
      -81.085 112 -30.915; ...
      112 -93.768 -18.214];
@@ -21,6 +21,5 @@ origOffset_2d = repmat(origOffset, 1, m*n);
 ycgcr = origOffset_2d + origT*rgb_2d';
 ycgcr = ycgcr';
 ycgcr = reshape(ycgcr, m, n, p);
-ycgcr = uint8(ycgcr);
 end
 
