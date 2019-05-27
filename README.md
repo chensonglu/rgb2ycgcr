@@ -1,6 +1,4 @@
 # rgb2ycgcr
-convert RGB image to YCgCr image
+convert RGB image to YCgCr and HSI image
 
-The following is transformation formula
-
-![rgb2ycgcr](http://7xq96n.com1.z0.glb.clouddn.com/rgb2ycgcr.png)
+refer to: https://blog.csdn.net/lkj345/article/details/50786280
